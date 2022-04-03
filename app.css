@@ -19,6 +19,7 @@ body{
     background-color:#dde4c0;
     color: rgb(122, 54, 199);
     border: 3px rgb(122, 54, 199) solid;
+    cursor: pointer;
 }
 
 @keyframes bounce{
