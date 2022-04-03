@@ -10,7 +10,7 @@ const fetchPokemon = async () =>{
         id: index + 1,
         image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`
     }));
-    console.log(data.results);
+    
     displayPokemon(pokemon);
 };
 
@@ -26,7 +26,27 @@ const displayPokemon = (pokemon) => {
 };
 
 const selectPokemon = async (id) =>{
-    console.log(id);
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const res = await fetch(url);
+    const pokeman = await res.json();
+    displayPopUp(pokeman);
+};
+
+const displayPopUp = (pokeman) => {
+    const type = pokeman.types.map((type) => type.type.name).join(', ');
+    const image = pokeman.sprites['front_default'];
+    const htmlString = `
+    <div class="popup">
+        <button id="closeBtn" onclick="closePopup()">Close</button>
+        <div class="card">
+            <img class="card-image" src="${image}"/>
+            <h2 class=""card-title>${pokeman.id}. ${pokeman.name}</h2>
+            <p><small>Height: </small>${pokeman.height} | <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${type}
+        </div>
+    </div>
+    `;
+    pokedex.innerHTML = htmlString + pokedex.innerHTML;
+    console.log(htmlString);
 };
 
 
