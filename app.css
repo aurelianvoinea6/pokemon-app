@@ -16,6 +16,8 @@ body{
 
 .card:hover{
     animation: bounce 0.5s linear;
+    background-color:#dde4c0;
+    color: white;
 }
 
 @keyframes bounce{
