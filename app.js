@@ -1,3 +1,6 @@
+const pokedex = document.getElementById("pokedex");
+console.log(pokedex);
+
 const fetchPokemon = () =>{
     
     const promises = [];
@@ -13,9 +16,15 @@ const fetchPokemon = () =>{
             image: data.sprites['front_default'],
             type: data.types.map ((type) => type.type.name).join(', ')
         }));
-        console.log(pokemon);
+        displayPokemon(pokemon);
     });
 };
+
+const displayPokemon = (pokemon) => {
+    console.log(pokemon);
+    const html = `<li>bulbasaur</li>`
+    pokedex.innerHTML = html;
+}
 
 
 fetchPokemon();
