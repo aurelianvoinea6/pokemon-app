@@ -8,19 +8,16 @@ body{
 .card{
     list-style: none;
     padding: 40px;
-    background-color: #f4f4f4;
-    color: rgb(66, 64, 64);
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    color: rgb(126, 38, 214);
     text-align: center;
     border-radius: 25px;
 }
 
 .card:hover{
     animation: bounce 0.5s linear;
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
-    color: rgb(126, 38, 214);
-    border: 3px rgb(126, 38, 214) solid;
     cursor: pointer;
+    
 }
 
 @keyframes bounce{
@@ -82,3 +79,45 @@ h1{
     -webkit-text-fill-color: transparent;
 
 }
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);;
+    opacity: 0.95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    #closeBtn {
+        position:absolute;
+        top:20px;
+        right: 20px;
+        background-image: linear-gradient(to right, #c21500 0%, #ffc500 51%, #c21500 100%)
+    }
+    
+    #closeBtn {
+        margin: 10px;
+        padding: 10px 20px;
+        border:none;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+    }
+    
+    #closeBtn:hover {
+        background-position: right center;
+
+        color: #fff;
+        text-decoration: none;
+    }
