@@ -29,6 +29,7 @@ const displayPokemon = (pokemon) => {
             <p>Type: ${pokeman.type}</p>
         </li>
     `)
+    .join("");
     pokedex.innerHTML = pokemonHTMLString;
 }
 
