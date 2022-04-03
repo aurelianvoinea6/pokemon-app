@@ -98,6 +98,7 @@ h1{
         position:absolute;
         top:20px;
         right: 20px;
+        font-weight: bold;
         background-image: linear-gradient(to right, #c21500 0%, #ffc500 51%, #c21500 100%)
     }
     
@@ -117,7 +118,7 @@ h1{
     
     #closeBtn:hover {
         background-position: right center;
-
+        cursor: pointer;
         color: #fff;
         text-decoration: none;
     }
