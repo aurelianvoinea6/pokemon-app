@@ -49,4 +49,12 @@ h1{
     text-transform: uppercase;
     text-align: center;
     font-size: 54px;
+    font-family: 'Rubik Wet Paint', cursive;
+    background-image: linear-gradient(360deg,
+        #624dc0,
+        #343052,
+        #070606);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
